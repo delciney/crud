@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang=”pt-br”>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>CRUD</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3>CRUD</h3>
+            </div>
+
+            <ul class="list-unstyled components">
+                <li>
+                    <a href="index.html">Produtos</a>
+                </li>
+
+                <li>
+                    <a href="categorias.html">Categorias</a>
+                </li>
+
+            </ul>
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content">
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-info">
+                        <i class="fas fa-align-left"></i>
+                        <span>Menu</span>
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <span>Produtos</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <h2>Produtos</h2>
+
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col"></th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Preço</th>
+                    <th scope="col">Categoria</th>
+                    <th scope="col">Ação</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row"> - </th>
+                        <td>
+                            <input type="text" class="form-control-plaintext border" id="NomeProduto" value="">
+                        </td>
+                        <td>
+                            <input type="number" class="form-control-plaintext border" id="PrecoProduto" value="">
+                        </td>
+                        <td>
+                            <select class="form-select form-control" id="selectCategoria" aria-label="Default select example">
+                                <option selected>Selecionar</option>
+                              </select>
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-success">
+                                <i class="bi bi-plus-square"></i>
+                            </button>
+                        </td>
+                      </tr>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Nome</td>
+                    <td>R$10,99</td>
+                    <td>Nome categoria</td>
+                    <td>
+                        <button type="button" class="btn btn-primary">
+                            <i class="bi bi-pencil-square"></i>
+                        </button>
+                        <button type="button" class="btn btn-danger">
+                            <i class="bi bi-trash"></i>
+                        </button>
+                    </td>
+                  </tr>
+                 
+                </tbody>
+              </table>
+
+            <div class="line"></div>
+
+            <h2>Categorias</h2>
+           
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col"></th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Ação</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row"> - </th>
+                        <td>
+                            <input type="text" class="form-control-plaintext border" id="NomeCategoria" value="">
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-success">
+                                <i class="bi bi-plus-square"></i>
+                            </button>
+                        </td>
+                      </tr>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Nome</td>
+                    <td>
+                        <button type="button" class="btn btn-primary">
+                            <i class="bi bi-pencil-square"></i>
+                        </button>
+                        <button type="button" class="btn btn-danger">
+                            <i class="bi bi-trash"></i>
+                        </button>
+                    </td>
+                  </tr>
+                 
+                </tbody>
+              </table>
+
+            <div class="line"></div>
+            
+        </div>
+    </div>
+
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+  
+    <!-- Main JS -->
+    <script src="main.js" ></script>
+        
+    
+</body>
+
+</html>
